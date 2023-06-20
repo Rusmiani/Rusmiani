@@ -1,0 +1,30 @@
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mahasiswa          |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+5 rows in set (0.08 sec)
+ 
+mysql> USE mahasiswa;
+Database changed
+ 
+mysql> CREATE TABLE mata_kuliah (kode_matkul CHAR(5) PRIMARY KEY, 
+nama_matkul VARCHAR(50) NOT NULL, jumlah_SKS TINYINT UNSIGNED DEFAULT '2',
+nama_jurusan VARCHAR(50));
+Query OK, 0 rows affected (0.01 sec)
+ 
+mysql> DESC mata_kuliah;
++--------------+---------------------+------+-----+---------+-------+
+| Field        | Type                | Null | Key | Default | Extra |
++--------------+---------------------+------+-----+---------+-------+
+| kode_matkul  | char(5)             | NO   | PRI | NULL    |       |
+| nama_matkul  | varchar(50)         | NO   |     | NULL    |       |
+| jumlah_SKS   | tinyint(3) unsigned | YES  |     | 2       |       |
+| nama_jurusan | varchar(50)         | YES  |     | NULL    |       |
++--------------+---------------------+------+-----+---------+-------+
+4 rows in set (0.01 sec)
